@@ -1,0 +1,110 @@
+{
+  "projectType": "saas",
+  "projectName": "Party Guest List",
+  "projectDescription": "A personal platform for party check-ins, photo galleries, unified long-form writing, and private file sharing.",
+  "theme": "almond",
+  "primaryColor": "#9333ea",
+  "lightColor": "#a855f7",
+  "darkColor": "#7c3aed",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "deployment"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/guest-list",
+              "features/best-dressed",
+              "features/photo-gallery",
+              "features/words-blog",
+              "features/transfers",
+              "features/party-hub"
+            ]
+          },
+          {
+            "group": "CLI",
+            "pages": [
+              "cli/overview",
+              "cli/albums",
+              "cli/photos",
+              "cli/transfers",
+              "cli/words",
+              "cli/media",
+              "cli/auth"
+            ]
+          },
+          {
+            "group": "Architecture",
+            "pages": [
+              "architecture/overview",
+              "architecture/data-storage",
+              "architecture/code-organization",
+              "architecture/media-pipeline"
+            ]
+          },
+          {
+            "group": "Operations",
+            "pages": [
+              "operations/environment-variables",
+              "operations/security",
+              "operations/monitoring",
+              "operations/cost-limits"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Endpoints",
+            "pages": [
+              "api/overview",
+              "api/admin",
+              "api/guests",
+              "api/best-dressed",
+              "api/transfers",
+              "api/words",
+              "api/upload"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Real-time guest list check-in with multi-device sync",
+    "Live best-dressed voting leaderboard",
+    "Album-based photo galleries with masonry grid and lightbox",
+    "Unified blog/notes/recipes system with visibility controls",
+    "Self-destructing file transfers with memorable URLs",
+    "Interactive CLI for content management",
+    "Face detection for OG images",
+    "Presigned upload URLs (direct to R2)"
+  ],
+  "publicApiSurface": [
+    "GET /api/guests",
+    "POST /api/guests/check-in",
+    "GET /api/best-dressed/votes",
+    "POST /api/best-dressed/vote",
+    "GET /api/words/:slug",
+    "POST /api/upload/presign",
+    "GET /api/transfers/:id",
+    "POST /api/admin/reset-guests",
+    "POST /api/admin/reset-votes",
+    "pnpm cli albums upload",
+    "pnpm cli photos add",
+    "pnpm cli transfers upload",
+    "pnpm cli words create",
+    "pnpm cli media upload"
+  ]
+}
